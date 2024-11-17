@@ -1,11 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { Button, StyleSheet, Text,  View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+     
+      <View style={styles.topo}> <Text> topo</Text></View>
+      <View style={styles.centro}> <Text> centro</Text></View>
+      <View style={styles.botoes}>
+      <Button title="ajuda"  />
+      <Button title="tander" />
+      <Button title="conta" />
+      </View>
+      <View style={styles.final}> <Text> Pagar ou Cobrar</Text></View>
+      
     </View>
   );
 }
@@ -13,8 +21,39 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    
   },
+
+  topo:{
+    backgroundColor: "red",
+    flex:2,
+    alignItems: "center",
+    padding: 50
+ 
+  },
+  centro:{
+    backgroundColor: "green",
+    flex:7,
+
+  },
+  botoes: {
+    backgroundColor: "pink",
+    flex: 2,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    
+    
+    
+  },
+  final:{
+    backgroundColor: "gray",
+    flex:1.5,
+
+   
+  },
+
+
+
+
 });
